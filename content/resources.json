@@ -1,0 +1,52 @@
+{
+  "/psicologia-forense/": {
+    "format": "Página web",
+    "language": "Español",
+    "published": null,
+    "dateLabel": null
+  },
+  "/recursos/glosario/": {
+    "format": "Página web",
+    "language": "Español",
+    "published": null,
+    "dateLabel": null
+  },
+  "/recursos/preguntas-frecuentes/": {
+    "format": "Página web",
+    "language": "Español",
+    "published": null,
+    "dateLabel": null
+  },
+  "https://www.organojudicial.gob.pa/cendoj": {
+    "format": "Portal institucional",
+    "language": "Español",
+    "published": null,
+    "dateLabel": null
+  },
+  "https://www.organojudicial.gob.pa/registro-judicial": {
+    "format": "Portal institucional",
+    "language": "Español",
+    "published": null,
+    "dateLabel": null
+  },
+  "https://www.imelcf.gob.pa/2026/02/05/expertos-del-imelcf-analizan-el-impacto-de-la-psicologia-forense-en-el-acceso-a-la-justicia-y-la-salud-mental/": {
+    "format": "Artículo web",
+    "language": "Español",
+    "published": "2026-02-05",
+    "dateLabel": "5 feb. 2026"
+  },
+  "https://journals.copmadrid.org/apj/art/apj2021a22": {
+    "format": "Artículo académico",
+    "language": "Español",
+    "published": "2022",
+    "dateLabel": "2022",
+    "edition": "Anuario de Psicología Jurídica, 32(1), febrero de 2022, 107–114."
+  },
+  "https://www.apa.org/practice/guidelines/forensic-psychology.pdf": {
+    "format": "PDF",
+    "language": "Inglés",
+    "published": "2013",
+    "dateLabel": "2013",
+    "edition": "American Psychologist, enero de 2013, 68(1), 7–19. Referencia histórica."
+  }
+}

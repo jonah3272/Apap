@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env*
+!.env.example
+node_modules/
+dist/*
+!dist/assets/
+content/pages.json

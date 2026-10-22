@@ -1,0 +1,4 @@
+{
+  "policy": "Add a review only after a documented human editorial review. Required fields: approved=true, humanReviewed=true, reviewer, credential, reviewedOn (ISO date) and scope. Source checking by an automated assistant does not establish professional or institutional review.",
+  "reviews": {}
+}

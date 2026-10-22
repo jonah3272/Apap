@@ -1,0 +1,38 @@
+{
+  "reviewed": "2026-10-22",
+  "scope": "Public-source research; absence of a verified source is not evidence that information or documents do not exist.",
+  "confirmed": [
+    {
+      "fact": "APAPSIF participated in the IMELCF meeting of 29 September 2022; the IMELCF publication names Indira Gordón as its representative at that meeting.",
+      "source": "https://www.imelcf.gob.pa/2022/09/30/se-efectua-primera-mesa-de-trabajo-sobre-modificaciones-a-las-leyes-50-y-69/",
+      "published": "2022-09-30",
+      "limit": "Historical participation only; does not establish current officeholders."
+    },
+    {
+      "fact": "The public @apapsif Instagram profile lists apapsif.panama@gmail.com.",
+      "source": "https://www.instagram.com/apapsif/",
+      "checked": "2026-10-22",
+      "limit": "Indexed first-party profile; mailbox delivery and response time not tested."
+    }
+  ],
+  "notEstablished": {
+    "mission": null,
+    "currentLeadership": null,
+    "statutes": null,
+    "membershipRequirements": null,
+    "approvedPhotograph": null
+  },
+  "registryLeads": [
+    {
+      "url": "https://www.panadata.net/es/organizaciones/id_PERSONA_JURDICA_Folio_N_25042044",
+      "classification": "Commercial directory; obtain and verify an official registry record before relying on it."
+    }
+  ],
+  "publicationRules": [
+    "Do not infer current officers from historical representatives or commercial name lists.",
+    "Do not substitute personal practice contact details for a verified association channel.",
+    "APAMELEF is a separate association.",
+    "Do not enable submissions, payments or file uploads without approved receiving details and actual procedures.",
+    "Preserve owner-only access and noindex until public launch and the domain connection are approved."
+  ]
+}

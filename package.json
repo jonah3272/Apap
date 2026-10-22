@@ -1,0 +1,10 @@
+{
+  "name": "apapsif-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio institucional de APAPSIF. HTML est\u00e1tico, sin dependencias de ejecuci\u00f3n.",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "test": "python3 scripts/check.py"
+  }
+}

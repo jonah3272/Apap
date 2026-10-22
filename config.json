@@ -1,0 +1,18 @@
+{
+  "name": "APAPSIF",
+  "organization": "Asociación Panameña de Psicología Forense",
+  "origin": "http://localhost:4173",
+  "targetDomain": "https://apapsif.com",
+  "publicationMode": "private-preview",
+  "publicLaunchApproved": true,
+  "domainConnectionVerified": false,
+  "verifiedContact": {
+    "email": "apapsif.panama@gmail.com",
+    "source": "https://www.instagram.com/apapsif/",
+    "checked": "2026-10-22",
+    "verification": "Public profile indexed by search; mailbox delivery not tested."
+  },
+  "language": "es-PA",
+  "publicLaunchAuthorization": "User authorized public APAPSIF launch and free GitHub Pages hosting on 2026-10-22; custom domain is not yet verified.",
+  "hostingProvider": "GitHub Pages"
+}
