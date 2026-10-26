@@ -33,6 +33,10 @@ jobs:
                   except Exception as e:
                       print(json.dumps({'requested':url,'error':str(e)}))
           PY
+      - name: Run GitHub's public Pages domain validator
+        run: |
+          gem install --user-install github-pages-health-check --no-document
+          ruby -rjson -rgithub-pages-health-check -e '%w[apapsif.com www.apapsif.com].each { |host| check = GitHubPages::HealthCheck::Site.new(host); puts({host: host, checks: check.to_hash}.to_json) }'
   build:
     runs-on: ubuntu-latest
     permissions:
