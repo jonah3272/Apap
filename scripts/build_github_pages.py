@@ -12,12 +12,15 @@ if not cfg.get('publicLaunchApproved'):
 base=os.environ.get('PAGES_BASE_URL','').rstrip('/')
 u=urlsplit(base)
 custom=urlsplit(cfg['targetDomain']).hostname
-if u.scheme!='https' or not u.hostname or u.query or u.fragment or u.username or u.password:
-    raise SystemExit('PAGES_BASE_URL must be the HTTPS URL returned by configure-pages.')
+if u.scheme not in {'http','https'} or not u.hostname or u.query or u.fragment or u.username or u.password or u.port:
+    raise SystemExit('PAGES_BASE_URL must be the URL returned by configure-pages, without credentials or a port.')
 if not (u.hostname.endswith('.github.io') or u.hostname in {custom,'www.'+custom}):
     raise SystemExit('Pages URL is not github.io or the configured custom domain.')
 if u.path and any(not (c.isalnum() or c in '/-_') for c in u.path):
     raise SystemExit('Unsupported Pages base path.')
+# GitHub reports http until the custom-domain certificate is ready and HTTPS
+# enforcement is enabled. Publish HTTPS canonicals throughout that transition.
+base=u._replace(scheme='https').geturl().rstrip('/')
 cfg.update(origin=base,targetDomain=base,publicationMode='public',domainConnectionVerified=True,hostingProvider='GitHub Pages')
 # The URL is supplied by the authenticated provider, not assumed to be apapsif.com.
 with tempfile.TemporaryDirectory(prefix='apapsif-pages-') as tmp:
