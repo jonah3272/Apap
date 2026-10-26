@@ -41,3 +41,9 @@ jobs:
       - name: Publish verified artifact
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Report custom domain and HTTPS certificate status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh api "repos/$GITHUB_REPOSITORY/pages"
+          --jq '{domain: .cname, url: .html_url, https_enforced: .https_enforced, certificate: .https_certificate}'
