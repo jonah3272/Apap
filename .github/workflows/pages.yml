@@ -9,6 +9,30 @@ concurrency:
   group: github-pages
   cancel-in-progress: false
 jobs:
+  domain-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check public DNS and website responses
+        run: |
+          python3 - <<'PY'
+          import json,re,socket,urllib.request
+          for host,types in [('apapsif.com',['NS','A','AAAA']),('www.apapsif.com',['CNAME','A','AAAA'])]:
+              for kind in types:
+                  try:
+                      with urllib.request.urlopen('https://dns.google/resolve?name='+host+'&type='+kind,timeout=10) as r:
+                          answer=json.load(r)
+                      print(json.dumps({'host':host,'record':kind,'dns_status':answer.get('Status'),'answer':answer.get('Answer',[])},ensure_ascii=False))
+                  except Exception as e:
+                      print(json.dumps({'host':host,'record':kind,'error':str(e)}))
+              for scheme in ['http','https']:
+                  url=scheme+'://'+host+'/'
+                  try:
+                      with urllib.request.urlopen(url,timeout=15) as r:
+                          body=r.read(500000).decode('utf-8','replace')
+                          print(json.dumps({'requested':url,'url':r.url,'status':r.status,'server':r.headers.get('server'),'github_request':r.headers.get('x-github-request-id'),'apapsif_content':'Asociación Panameña' in body,'canonical':re.findall(r'<link[^>]*rel="canonical"[^>]*>',body)},ensure_ascii=False))
+                  except Exception as e:
+                      print(json.dumps({'requested':url,'error':str(e)}))
+          PY
   build:
     runs-on: ubuntu-latest
     permissions:
