@@ -13,6 +13,7 @@
     "verification": "Public profile indexed by search; mailbox delivery not tested."
   },
   "language": "es-PA",
+  "underConstruction": true,
   "publicLaunchAuthorization": "User authorized public APAPSIF launch and free GitHub Pages hosting on 2026-10-22; custom domain is not yet verified.",
   "hostingProvider": "GitHub Pages"
 }

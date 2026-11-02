@@ -11,6 +11,14 @@ El flujo obtiene la dirección real de GitHub Pages y genera automáticamente en
 
 ## Desarrollo
 
+### Aviso de construcción
+
+El aviso **“Sitio en construcción”** aparece solo en la página de inicio cuando `underConstruction` está en `true` en `config.json`. Para retirarlo, cambiar ese valor a `false` y guardar el cambio en la rama `main`: GitHub Actions reconstruirá y publicará el sitio automáticamente. Se puede volver a activar con `true`.
+
+El aviso no bloquea la navegación ni los canales de contacto. No tiene una fecha de retirada automática.
+
+### Construcción local
+
 Requiere Python 3; no hay paquetes de ejecución, base de datos ni servicios de pago.
 
 ```sh
