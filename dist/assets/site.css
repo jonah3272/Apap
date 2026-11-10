@@ -96,6 +96,13 @@
   .construction-notice h2 { font:650 1rem/1.5 var(--sans);letter-spacing:0;margin-bottom:4px }
   .construction-notice p { font-size:.875rem;line-height:1.65;max-width:76ch }
   .construction-notice .text-link { flex-shrink:0;min-height:44px;border-color:#9d865f }
+  .board-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:22px;margin-top:28px }
+  .board-card { overflow:hidden;background:#fff;border:1px solid var(--line) }
+  .board-card img,.board-placeholder { display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;background:var(--aqua) }
+  .board-placeholder { display:grid;place-items:center;background:#e5eef1;color:#52717c;font:400 3rem/1 var(--serif) }
+  .board-card-copy { padding:18px }
+  .article .board-card h3 { font:600 1rem/1.4 var(--sans);letter-spacing:0;margin:0 0 5px }
+  .article .board-card p { color:var(--muted);font-size:.8125rem;line-height:1.5 }
   .site-header { position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line) }
   .header-inner { display:flex;align-items:center;justify-content:space-between;gap:28px;height:96px }
   .brand { display:block;flex-shrink:0 }
