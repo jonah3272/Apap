@@ -103,6 +103,14 @@
   .board-card-copy { padding:18px }
   .article .board-card h3 { font:600 1rem/1.4 var(--sans);letter-spacing:0;margin:0 0 5px }
   .article .board-card p { color:var(--muted);font-size:.8125rem;line-height:1.5 }
+  @media(max-width:650px) {
+    .board-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:12px }
+    .board-card-copy { padding:12px }
+    .article .board-card h3 { font-size:.9rem }
+    .construction-inner { padding-block:16px }
+    .construction-notice .text-link { padding-block:8px }
+    #solicitud .button { width:100%;text-align:center }
+  }
   .site-header { position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line) }
   .header-inner { display:flex;align-items:center;justify-content:space-between;gap:28px;height:96px }
   .brand { display:block;flex-shrink:0 }
