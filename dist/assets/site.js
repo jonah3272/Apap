@@ -166,3 +166,27 @@ document.querySelector('[data-copy-email]')?.addEventListener('click', async () 
     output.textContent = 'Selecciona y copia la dirección de correo que aparece arriba.';
   }
 });
+
+// Membership inquiries are sent to the APAPSIF database; no documents or payments are collected.
+(() => {
+  const form = document.querySelector('#membership-form');
+  if (!form) return;
+  const status = document.querySelector('#membership-status');
+  form.hidden = false;
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const submit = form.querySelector('button[type="submit"]');
+    const fields = new FormData(form);
+    const payload = {nombre: String(fields.get('nombre')).trim(), email: String(fields.get('email')).trim(), tipo: fields.get('tipo')};
+    if (payload.nombre.length < 2) { status.textContent = 'Escribe tu nombre completo.'; return; }
+    submit.disabled = true; status.textContent = 'Enviando…';
+    try {
+      const response = await fetch('https://scqfcivdksmbgpmtfkwj.supabase.co/rest/v1/solicitudes_afiliacion', {method:'POST', headers:{'Content-Type':'application/json','apikey':'sb_publishable_yxhYjhMfqEyyL_Bucc9OzQ_8KECcWY4','Prefer':'return=minimal'}, body:JSON.stringify(payload)});
+      if (!response.ok) throw new Error('submit failed');
+      form.reset(); status.textContent = 'Solicitud recibida. Gracias por contactar a APAPSIF.';
+    } catch {
+      status.textContent = 'No se pudo enviar. Inténtalo de nuevo o escribe a apapsif.panama@gmail.com.';
+    } finally { submit.disabled = false; }
+  });
+})();

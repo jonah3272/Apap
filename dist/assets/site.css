@@ -596,3 +596,13 @@
 .search-results .search-kind { display:block;margin-bottom:5px;font:600 .6875rem/1.5 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--teal) }
 .search-results a { overflow-wrap:anywhere }.faq-toggle { margin:0 0 22px;font-size:.875rem }
 }
+
+@layer components {
+  .membership-form { display:grid;gap:10px;max-width:560px;margin:24px 0;padding:24px;background:#fff;border:1px solid var(--line) }
+  .membership-form label { font-size:.875rem;font-weight:650;margin-top:5px }
+  .membership-form input,.membership-form select { width:100%;min-height:48px;border:1px solid #91a9b2;border-radius:2px;background:#fff;color:var(--ink);font:inherit;padding:10px 12px }
+  .membership-form .button { justify-self:start;margin-top:6px }
+  .article .membership-form p { font-size:.875rem;line-height:1.6;margin:6px 0 }
+  .membership-form input:focus-visible,.membership-form select:focus-visible { outline:3px solid #9b6415;outline-offset:3px }
+  @media(max-width:650px) { .membership-form { padding:18px }.membership-form .button { width:100% } }
+}

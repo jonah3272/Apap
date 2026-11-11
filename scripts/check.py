@@ -36,7 +36,7 @@ for file in DIST.rglob('*.html'):
  if p.canon!=[cfg['origin'].rstrip('/')+route]:errors.append(f'{file}: canonical does not match its route')
  if len(p.desc)!=1 or not 50<=len(p.desc[0])<=220:errors.append(f'{file}: description length')
  if cfg['publicationMode']!='public' and not any('noindex'in x for x in p.robots):errors.append(f'{file}: preview indexable')
- if p.forms:errors.append(f'{file}: unapproved data collection')
+ if p.forms and (route!='/afiliate/' or len(p.forms)!=1 or p.forms[0].get('id')!='membership-form'):errors.append(f'{file}: unapproved form')
  organizations=[x for x in p.ld if x.get('@type')=='Organization']
  if len(organizations)!=1 or organizations[0].get('name')!=cfg['organization']:errors.append(f'{file}: inaccurate organization identity')
  if organizations and set(organizations[0])!={'@context','@type','@id','name','alternateName','url','logo'}:errors.append(f'{file}: unapproved institutional schema claims')

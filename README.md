@@ -36,6 +36,6 @@ La construcción local es una vista previa no indexable. El flujo público usa `
 
 ## Contenido y contacto
 
-El correo enlazado, `apapsif.panama@gmail.com`, aparece en el perfil público de Instagram de APAPSIF. No se envió un mensaje de prueba. El sitio no recibe pagos, expedientes ni formularios. Los contenidos introductorios enlazan sus fuentes; no se presentan como asesoría profesional ni se atribuyen cargos, servicios o certificaciones sin verificación.
+El correo enlazado, `apapsif.panama@gmail.com`, aparece en el perfil público de Instagram de APAPSIF. No se envió un mensaje de prueba. El formulario de afiliación recibe nombre, correo y tipo de solicitud en el proyecto Supabase de APAPSIF. El sitio no recibe pagos ni expedientes. Las solicitudes se consultan en Supabase; no hay notificaciones automáticas por correo. Los contenidos introductorios enlazan sus fuentes; no se presentan como asesoría profesional ni se atribuyen cargos, servicios o certificaciones sin verificación.
 
 Diseño adaptable, búsqueda con acentos, biblioteca y glosario filtrables, navegación con teclado, enlaces de correo y controles de lectura. SEO en español para Panamá, con URL canónicas, datos estructurados y sitemap.
