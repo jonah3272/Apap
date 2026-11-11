@@ -186,7 +186,7 @@ document.querySelector('[data-copy-email]')?.addEventListener('click', async () 
       if (!response.ok) throw new Error('submit failed');
       form.reset(); status.textContent = 'Solicitud recibida. Gracias por contactar a APAPSIF.';
     } catch {
-      status.textContent = 'No se pudo enviar. Inténtalo de nuevo o escribe a apapsif.panama@gmail.com.';
+      status.textContent = 'No se pudo enviar. Si ya enviaste una solicitud, espera 10 minutos antes de volver a intentarlo. También puedes escribir a apapsif.panama@gmail.com.';
     } finally { submit.disabled = false; }
   });
 })();
